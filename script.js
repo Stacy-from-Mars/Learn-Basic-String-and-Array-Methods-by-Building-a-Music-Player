@@ -92,7 +92,7 @@ const playSong = (id) => {
     if (userData?.currentSong === null || userData?.currentSong.id !== song.id) {
         audio.currentTime = 0;
     } else {
-        audio.currentTime = userData?.songCurrentTime
+        audio.currentTime = userData?.songCurrentTime;
     }
     userData.currentSong = song;
     playButton.classList.add("playing");
@@ -124,6 +124,10 @@ const playPreviousSong = () => {
         playSong(previousSong.id);
     }
 };
+
+const highlightCurrentSong = () => {
+  const playlistSongElements = document.querySelectorAll(".playlist-song");
+}
 
 const renderSongs = array => {
     const songsHTML = array.map(song => {
