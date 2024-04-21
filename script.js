@@ -127,7 +127,8 @@ const playPreviousSong = () => {
 };
 
 const setPlayerDisplay = () => {
-
+    const playingSong = document.getElementById("player-song-title");
+    const songArtist = document.getElementById("player-song-artist");
 };
 
 const highlightCurrentSong = () => {
@@ -137,7 +138,7 @@ const highlightCurrentSong = () => {
         songEl.removeAttribute("aria-current");
         if (songToHighlight) {
             songToHighlight.setAttribute("aria-current", "true");
-        };
+        }
     });
 }
 
